@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	</head>
+	
+	<body>
+	<p>Hello</p>
+	<a href="#">Click to hide me too</a>
+	<p>Here is another parahraph</p>
+	
+	<script>
+	$("a").click(function(event){
+	event.preventDefault();
+	$(this).hide();
+	});
+	</script>
+	
+	</body>
+</html>

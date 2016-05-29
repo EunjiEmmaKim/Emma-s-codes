@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			div{
+			background: #def3ca;
+			margin: 3px;
+			width: 80px;
+			display:none;
+			float:left;
+			text-align:center;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<button id="showing">Show</button>
+		<button id="hiding">Hide</button>
+		<div>Hello 3,</div>
+		<div>How</div>
+		<div>are</div>
+		<div>you?</div>
+	
+	<script>
+		$("#showing").click(function(){
+			$("div").first().show("fast", function showNext(){
+			$(this).next("div").show("fast", showNext);
+			});
+		});
+		
+		$("#hiding").click(function(){
+			$("div").hide(1000);
+		});
+
+		</script>
+	
+	</body>
+</html>

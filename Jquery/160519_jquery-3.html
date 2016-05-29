@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+		span.change{
+			color: blue;
+			text-decoration:line-through;
+			background-color:yellow;
+			font-style:bold;
+			font-size:120%;
+		}
+	</style>
+	</head>
+	
+	<body>	
+		<div>
+			<span>One,</span>
+			<span>Two,</span>
+			<span>Three,</span>
+			<span>Four</span>
+		</div>
+		<div>
+			<b>Colours : </b>
+			<span>White,</span>
+			<span>Red,</span>
+			<span>Green,</span>
+			<span>Blue</span>
+		</div>
+		
+	<script>
+		$(document).ready(function(){
+			$("div span:last-of-type").addClass("change");
+			//$("div span:last-child")
+			//.css({"color":"green", "font-size":"40px"})
+			//.hover(function(){$(this).addClass("last");},function(){$(this).removeClass("last");});			
+		});		
+	</script>
+	
+	</body>
+</html>

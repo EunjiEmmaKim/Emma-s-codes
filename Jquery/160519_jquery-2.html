@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>	
+		<!--<div>Bill Gates</div>
+		<div>Melinda Gates</div>
+		<div>Jeniffer Gates</div>
+		<div>John Gates</div>
+		<div>Steve Jobs</div>
+		<div>Mark Zuckerberg</div>-->
+		<input type="button" /><br>
+		<input type="text" /><br>
+		<input type="image" /><br>
+		<input type="password" /><br>
+		<input type="radio" /><br>
+		<input type="submit" /><br>
+		<input type="reset" />
+
+		
+	<script>
+		$(document).ready(function(){
+				$("input:button").val("Button");
+				$("input:text").val("I am a text");
+				$("input:image").val("This is a image");
+				$("input:password").val("passwords");
+				$("input:radio").val("I'm a radio");
+				$("input:submit").val("Please submit");
+				$("input:reset").val("Click if you want to reset");
+				alert($('input:button').val());
+				alert($('input:text').val());
+				alert($('input:image').val());
+				alert($('input:password').val());
+				alert($('input:radio').val());
+				alert($('input:submit').val());
+				alert($('input:reset').val());
+			//$("div:contains('Gates')").css("text-decoration", "underline").css("font-size", "40px");
+		});		
+	</script>
+	
+	</body>
+</html>

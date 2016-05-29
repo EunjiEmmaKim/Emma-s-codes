@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>Q1</title>
+	<style>
+	
+	textarea{
+		width: 250px;
+		height: 120px;
+		resize: none;
+	}	
+
+	#wrap{
+		text-align: center;
+	}
+	
+	</style>
+	
+	</head>
+
+<body>
+	<form name="q1form" action="q1.php" method="post">
+	<table align="center" width="1000px" border="2">
+		<tr>
+			<td><label for="lastname">Last Name</label></td>
+			<td><input type="text" placeholder="Enter last name" name="lastname" required></td>
+		</tr>
+		<tr>
+			<td><label for="firstname">First Name</label></td>
+			<td><input type="text" placeholder="Enter first name" name="firstname" required></td>
+		</tr>
+		<tr>
+			<td><label for="address">Address</label></td>
+			<td><textarea name="address" placeholder="Enter Address" maxlength="200" required></textarea></td>
+		</tr>
+		<tr>
+			<td><label for="city"> City </label></td>
+			<td><input type="text" width="50px" name="city" placeholder="City" required> 
+			<label for="state"> State </label>
+			<input type="text" width="50px" name="state" pattern="[A-Za-z]{2,3}" title="2 or 3 characters only" maxlength="3" required></td>
+		</tr>
+		<tr>
+			<td><label for="zip">Zip/Postal Code</label></td>
+			<td><input type="text" placeholder="6 digits only" pattern="[0-9]{6}" title="6 numbers only" name="zip" required></td>
+		</tr>
+		<tr>
+			<td><label for="country">Country</label></td>
+			<td>
+			<select name="country" required>
+				<optgroup label="Country">					
+					<option value="New Zealand">New Zealand</option>
+					<option value="China">China</option>
+					<option value="South Korea" selected>South Korea</option>
+				</optgroup>				
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="phone">Phone(country code, area code, number)</label></td>
+			<td>(+<input type="text" name="phone1" placeholder="2 digit" pattern="[0-9]{2}" title="2 numbers only" required>)
+				<input type="text" name="phone2" placeholder="2 digit" pattern="[0-9]{2}" title="2 numbers only" required>
+				-<input type="text" name="phone3" placeholder="6 digit" pattern="[0-9]{6}" title="6 numbers only" required>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="email">E-mail</label></td>
+			<td><input type="email" name="email" placeholder="Enter email" title="Enter email address" required></td>
+		</tr>
+		<tr>
+			<td><label for="birth">Birth Date</label></td>
+			<td>
+				Month<input type="number" min="1" max="12" name="birth1" placeholder="Month" required> 
+				Day<input type="number" min="1" max="30"  name="birth2" placeholder="Day" required> 
+				Year(4 digit)<input type="number" min="2000" max="2015" name="birth3" placeholder="Year" required>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="gender">Gender</label></td>
+			<td>
+			<select name="gender">
+				<optgroup label="Gender" required>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				</optgroup>				
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td><label for="session">Starting Session</label></td>
+			<td>
+				<input type="radio" name="session" value="Spring 2014" checked> Spring 2014
+				<input type="radio" name="session" value="Summer 2014"> Summer 2014
+				<input type="radio" name="session" value="Autumn 2014"> Autumn 2014
+				<input type="radio" name="session" value="Winter 2014"> Winter 2014
+			</td>
+		</tr>
+		<tr>
+			<td><label for="comments">Comments Questions</label></td>
+			<td><textarea name="comments" placeholder="Enter comments here" maxlength="200" required></textarea></td>
+		</tr>
+		<tr>
+			<td colspan = 2>
+			<div id="wrap">
+				<input type="submit" name="submit" value="Submit">
+				<input type="reset" name="reset" value="Clear this Form">
+			</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+
+</html>

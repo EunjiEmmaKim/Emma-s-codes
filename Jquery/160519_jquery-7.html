@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>	
+		<div id="1">jQuery</div>
+		<div id="2">jQuery</div>
+		<div>jQuery</div>
+		<div id="foo">example
+			<p>moving</p>
+			<p>paragraphs</p>
+		</div>
+		
+	<script>
+		$(document).ready(function($){
+			//alert($('div').is('#2'));
+			//alert($('div').is('#3'));
+			//alert($('div').is(':hidden'));
+			$("p").appendTo("#foo");
+		})(jQuery);		
+	</script>
+	
+	</body> 
+</html>

@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+
+		
+		</style>
+	</head>
+	
+	<body>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Phone</th>
+			</tr>
+			<tr>
+				<td>JIMIN</td>
+				<td>Norway</td>
+				<td>951013</td>
+			</tr>
+			<tr>
+				<td>YOONGI</td>
+				<td>NEW YORK</td>
+				<td>930309</td>
+			</tr>
+			<tr>
+				<td>HOSEOK</td>
+				<td>GWANG JOO</td>
+				<td>940218</td>
+			</tr>
+			<tr>	
+				<td colspan="2">Total</td>
+				<td>$120</td>
+			</tr>
+		</table>
+		
+	
+	<script>
+		$(document).ready(function(){
+			$("th").css({'background-color': "white", 'font-weight':"bold", "color":"darkgrey", "font-size":"14px"});
+			$("th:last").css({"color":"red"});
+			$("td:eq(2), td:eq(5), td:eq(8),td:last").css({"color":"red"});
+			$("table").css({'background-color': "grey", "text-align":"center"});
+			$("tr:last").css({'font-weight':"bolder", 'background-color': "yellow"});
+			$("tr:gt(2)").css({"font-size":"30px", "background-color":"hotpink"});
+			$("tr:lt(2)").css({"font-size":"30px", "background-color":"blue"});
+		});		
+	</script>
+	
+	</body>
+</html>

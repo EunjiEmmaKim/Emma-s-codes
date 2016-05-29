@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>	
+		<ol>
+			<li>Programming</li>
+			<ol type="a">
+				<li>Procedural</li>
+					<ol type="i" id="this">
+						<li>C++</li>
+						<li>Java</li>
+						<li>PHP</li>
+					</ol>
+				<li id="oo">Object oriented</li>
+			</ol>
+			
+		</ol>
+	<script>
+		$(document).ready(function(){			
+			$("#this").appendTo("#oo");
+		});		
+	</script>
+	
+	</body> 
+</html>

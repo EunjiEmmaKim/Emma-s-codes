@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			.gone{
+				display:none;
+				}
+		
+		</style>
+	</head>
+	
+	<body>
+		<!-- <ol id="presentation">
+			<li class="slide">Getting started</li>
+			<li class="slide gone">Selectors</li>
+			<li class="slide">Filters</li>
+			<li class="slide"></li>
+			<li class="slide">Ajax</li>
+		</ol>
+		-->
+		
+		<div class="welcome"></div>
+		<input type="text" name="prezName" /><br>
+		disabled<input disabled="disabled" type="text" name="prezDescription" /><br>
+		
+		checked<input type="checkbox" checked="checked" /><br>
+		<select name="currentSlide"><br>
+			<option>Selectors</option>
+			<option selected="selected">
+			Filters
+			</option>
+		</select><br>
+		
+		<input type="checkbox" />
+		
+	
+	<script>
+		$(document).ready(function(){
+			//$('ol li:first').css({"background-color":"grey"});
+			//$('ol li:first-child').css({"background-color":"grey"});
+			//$('ol li:last').css({"background-color":"grey"});
+			//$('ol li:last-child').css({"background-color":"grey"});
+			//$('ol li:odd').css({"background-color":"grey"});
+			//$('ol li:even').css({"background-color":"grey"});
+			//$('ol li:nth-child(2)').css({"background-color":"grey"});
+			//$('ol li:nth-child(odd)').css({"background-color":"grey"});
+			//$('ol li:nth-child(even)').css({"background-color":"grey"});
+			//$('ol li:nth-child(2n)').css({"background-color":"grey"});
+			//$('ol li:eq(1)').css({"background-color":"grey"});
+			//$('ol li:gt(1)').css({"background-color":"grey"});
+			//$('ol li:lt(2)').css({"background-color":"grey"});
+			//$('ol li:hidden').css({"background-color":"grey"});
+			//$('ol li:visible').css({"background-color":"grey"});
+			//$('input:enabled').css({"background-color":"red"});
+			//$('input:disabled').css({"background-color":"red"});
+			//$('input:checked').css({"background-color":"red"});
+			//$('input:not(:checked)').css({"background-color":"red"});
+			//$('select option:selected').css({"background-color":"red"});
+		});		
+	</script>
+	
+	</body>
+</html>

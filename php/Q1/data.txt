@@ -1,0 +1,12 @@
+Last Name : Kim
+First Name : Eunji
+Address : Auckland, New Zealand
+City : Auckland
+Zip/Postal Code : 101010
+Country : South Korea
+Phone(country code, area code, number) : (+ 12 ) 34 - 567890
+E-mail : eunjieunji007@gmail.com
+Birth Date : 3 / 8 / 2000
+Gender : Female
+Starting Session : Spring 2014
+Comments Questions : Do you have a car?

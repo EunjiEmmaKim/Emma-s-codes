@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			.gone{
+				display:none;
+				}
+		
+		</style>
+	</head>
+	
+	<body>
+		<form>
+		Name : <input type="text" /><br>	
+		Password : <input type="text" placeholder="please" /><br><br>
+		<button id="btn1"> OK </button>
+		<button id="btn2"> Submit </button><br><br>
+			<table border="1">
+				<tr><td>Sample1</td><td></td></tr>
+				<tr><td>Sample2</td><td></td></tr>
+				<tr><td></td><td>Sample3</td></tr>
+			</table>
+	
+	<script>
+		$(document).ready(function(){
+			$("td:empty").text("Empty!").css("background-color", "green");
+			$("input:empty").css("background-color", "pink");
+			$("#btn1").click(function(){
+				$("input:empty").text("Please fill out").css("background-color", "red");
+				});
+			$("#btn2").click(function(){
+				$("input:empty").text("Please fill out").css("background-color", "red");
+				});
+		});		
+	</script>
+	
+	</body>
+</html>

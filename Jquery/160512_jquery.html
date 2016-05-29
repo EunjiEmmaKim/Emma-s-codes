@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+	
+	<body>
+		<button id="btnToggle">Toggle</button>
+		<button id="btnHide">Hide Detail</button>
+		<button id="btnShow">Show Detail</button>
+		<button id="btnFadeIn">Fade In</button>
+		<button id="btnFadeOut">Fade Out</button>
+		
+		<header class="fade">
+			<h1>HEADER</h1>
+		</header>
+		
+		<h1>First Heading</h1>
+			<p>This is a paragraph</p>
+			<p>This is another paragraph</p>
+			
+		<h1>Second Heading</h1>
+			<p>This is a paragraph</p>
+			<p>This is another paragraph</p>
+			
+		<h1>Third Heading</h1>
+			<p>This is a paragraph</p>
+			<p>This is another paragraph</p>
+		
+		<hr/>	
+	
+	<script>
+		$(document).ready(function(){
+			$("#btnToggle").click(function(){
+			$("p").toggle();
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#btnHide").click(function(){
+			$("p").hide();
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#btnShow").click(function(){
+			$("p").show();
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#btnFadeIn").click(function(){
+			$(".fade").fadeIn("slow");
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#btnFadeOut").click(function(){
+			$(".fade").fadeOut(1000);
+			});
+		});
+	</script>
+	
+	</body>
+</html>

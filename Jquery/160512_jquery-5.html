@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			p{
+			background-color : yellow;
+			display : none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>JQUERY</h1>
+				<button id="btn1">#btn1</button>
+				<button id="btn2">#btn2</button>
+				<button id="btn3">#btn3</button>
+				<button id="btn4">#btn4</button>
+			</div>
+			<div class="row">
+				<div class="col-xs-3">
+					<div id="panel1" style="display:none" class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>#panel1</h2>
+						</div>
+						<div class="panel-body">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div id="panel2" style="display:none" class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>#panel2</h2>
+						</div>
+						<div class="panel-body">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div id="panel3" style="display:none" class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>#panel3</h2>
+						</div>
+						<div class="panel-body">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div id="panel4" style="display:none" class="panel panel-primary">
+						<div class="panel-heading">
+							<h2>#panel4</h2>
+						</div>
+						<div class="panel-body">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	<script>
+		$(document).ready(function(){
+			$('#btn1').on('click', function(){
+				$('#panel1').show(1000).hide(300).show(1000).hide(300).show(1000);
+				$('#panel1').css({display:'block', color:'red', fontWeight:'normal'});
+				});
+				
+			$('#btn2').on('click', function(){
+				$('#panel2').slideUp(1000).slideDown(100);				
+				});
+				
+			$('#btn3').on('click', function(){
+				$('#panel3').fadeIn(1000).fadeOut(100);		
+				});
+				
+			$('#btn4').on('click', function(){
+				$('#panel4').fadeToggle(3000).slideToggle(1000);		
+				});
+				
+				});
+	
+		
+	</script>
+	
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+	</style>
+	</head>
+	
+	<body>	
+		<h3>My Homepage</h3>
+		<p class="sample">Sunday</p>
+		<p>Monday</p>
+		<p>Tuesday</p>
+		<p class="sample">Wednesday</p>
+		<p>Thursday</p>
+		<p>Friday</p>
+		<p>Saturday</p>
+		
+	<script>
+		$(document).ready(function(){
+			$("p:not(.sample)").css("background-color","green");
+		});		
+	</script>
+	
+	</body> 
+</html>

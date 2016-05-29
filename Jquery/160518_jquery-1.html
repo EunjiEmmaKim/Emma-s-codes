@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			#main, #main1, #main2, #main3{
+				padding:5px;
+				width:100px;
+				height:100px;
+				text-align:center;
+				background-color: lightblue;
+				border : solid 1px #B6b6b6;
+			}
+			
+			#btn1{
+				margin:10px;
+					
+			}
+		
+		</style>
+	</head>
+	
+	<body>
+		<div id="main">Click Me</div>
+		<div id="main1">Click Me</div>
+		<div id="main2">Click Me</div>
+		<div id="main3">Click Me</div>
+		<button id="btn1">Click</button>
+
+		
+	
+	<script>
+		$(document).ready(function(){
+			//$("#btn1").click(function(){
+			//	$("#main").toggle(100);
+			//});
+			$("#btn1").click(function(){
+				$("#main").fadeTo("slow", 0);
+				$("#main1").fadeTo("slow",0.75);
+				$("#main2").fadeTo("slow",0.50);
+				$("#main3").fadeTo("slow",0.25);
+			});
+		});		
+	</script>
+	
+	</body>
+</html>

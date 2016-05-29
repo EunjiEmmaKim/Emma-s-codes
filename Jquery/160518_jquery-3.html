@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			table{
+				background: #eee;
+				}
+		
+		</style>
+	</head>
+	
+	<body>
+		<table>
+			<tr><td>Row 0 Even</td></tr>
+			<tr><td>Row 1 odd</td></tr>
+			<tr><td>Row 2 Even</td></tr>
+			<tr><td>Row 3 odd</td></tr>
+			<tr><td>last</td></tr>
+		</table>
+		
+	
+	<script>
+		$(document).ready(function(){
+			$("tr:even").css("background-color", "green");
+			$("tr:last").css({'background-color': "red", 'font-weight':"bolder", height:"100"});
+		});		
+	</script>
+	
+	</body>
+</html>

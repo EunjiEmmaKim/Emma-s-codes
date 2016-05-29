@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Q4 Order Form</title>
+</head>
+	<body>
+		<h2>Oder Form</h2> 
+
+		<form action="orderform.php" method="get" name="f1" onsubmit="return mytest()">
+			<table>
+				<tr>
+					<td style = "background-color : lightgrey;">Item</td>
+					<td style = "background-color : lightgrey;" width="150px">Quantity</td>
+				</tr>
+				<tr>
+					<td>Tires</td>
+					<td><input type="text" name="tires" width="10px"></input></td>
+				</tr>
+				<tr>
+					<td>Oil</td>
+					<td><input type="text" name="oil"></input></td>
+				</tr>
+				<tr>
+					<td>Spark Plugs</td>
+					<td><input type="text" name="spark"></input></td>
+				</tr>
+				<tr>
+					<td>Shipping Address</td>
+					<td><input type="text" name="address" width="150px"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit Order"></input></td>
+				</tr>
+			</table>
+		</form>
+
+	<script>
+		function mytest(){
+		if((f1.tires.value == "") && (f1.oil.value == "") && (f1.spark.value == ""))
+		{
+			document.write("<h2>Order Results</h2><div style=color:red;>You did not order anything on the previous page!</div>");
+			return false;
+					
+		} else if(f1.address.value == "")
+		{
+			alert("You should write your address");
+			document.f1.address.focus();
+			return false;
+
+		}		
+			else
+			{
+				document.forms["f1"].submit();
+			}
+	}
+	</script>
+		
+
+	</body>	
+</html>
