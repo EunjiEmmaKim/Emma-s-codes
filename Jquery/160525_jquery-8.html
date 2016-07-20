@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+	#wrapper{
+		background-color: #369;
+		width: 600px;
+		height: auto;
+		margin: 0px auto;
+	}
+	
+	.text1, .text2, .text3, .text4, .text5{
+		background-color:#060;
+		width: 600px;
+		height: 40px;
+		border: 1px solid #000;
+		text-align: center;
+		color: #FFF;
+		font-family: Tahoma;
+		font-size: 18px;
+		padding:5px;		
+		}
+		
+	.htmltext{
+		display:block;
+		text-align:center;
+		background-color:#F90;
+		width:100%;
+		height:80px;
+		color:#000;
+		font-family:Tahoma;
+		font-size:18px;
+		padding:5px;
+	}
+	
+	.csstext, .jstext, .jqtext, .phptext{
+		display:none;
+		text-align:center;
+		background-color:#F90;
+		width:100%;
+		height:80px;
+		color:#000;
+		font-family:Tahoma;
+		font-size:18px;
+		padding:5px;
+}
+	</style>
+	</head>
+	
+	<body>	
+	<div id="wrapper">
+		<div class="text1">HTML</div>
+			<div class="htmltext">This is HTML</div>
+		<div class="text2">CSS</div>
+			<div class="csstext">This is CSS</div>
+		<div class="text3">Javascript</div>
+			<div class="jstext">This is javascript</div>
+		<div class="text4">JQuery</div>
+			<div class="jqtext">This is jQuery</div>
+		<div class="text5">PHP</div>
+			<div class="phptext">This is PHP</div>
+	</div>
+	<script>	
+	$(document).ready(function(){
+			$(".text1").mouseover(function(){
+				$(".htmltext").slideDown(500);
+				$(".csstext").slideUp(500);
+				$(".jstext").slideUp(500);
+				$(".jqtext").slideUp(500);
+				$(".phptext").slideUp(500);
+				});
+			$(".text2").mouseover(function(){
+				$(".htmltext").slideUp(500);
+				$(".csstext").slideDown(500);
+				$(".jstext").slideUp(500);
+				$(".jqtext").slideUp(500);
+				$(".phptext").slideUp(500);
+				});
+			$(".text3").mouseover(function(){
+				$(".htmltext").slideUp(500);
+				$(".csstext").slideUp(500);
+				$(".jstext").slideDown(500);
+				$(".jqtext").slideUp(500);
+				$(".phptext").slideUp(500);
+				});
+			$(".text4").mouseover(function(){
+				$(".htmltext").slideUp(500);
+				$(".csstext").slideUp(500);
+				$(".jstext").slideUp(500);
+				$(".jqtext").slideDown(500);
+				$(".phptext").slideUp(500);
+				});
+			$(".text5").mouseover(function(){
+				$(".htmltext").slideUp(500);
+				$(".csstext").slideUp(500);
+				$(".jstext").slideUp(500);
+				$(".jqtext").slideUp(500);
+				$(".phptext").slideDown(500);
+				});
+			
+				});
+			
+	</script>
+		
+	
+	</body> 
+</html>

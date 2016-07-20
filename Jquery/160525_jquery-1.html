@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>	
+		<button>Start Animation</button>
+		<div id="test">Hello</div>
+		<p>Animated Paragraph in First Lesson Of Jquery</p>
+	
+	<script>
+		$(document).ready(function(){			
+			$("button").click(function(){
+				$("#test").animate({marginLeft:'300px', height:'toggle', width:'200px'});
+				})
+			$("button").click(function(){
+				$("p").show("slow");
+				$("p").animate({fontSize:'24px'});
+				$("p").css('color', '#F90');
+				$("p").css('width', '500px');
+				$("p").css('height', '30px');
+				$("p").css('border-radius', '20px');
+				$("p").css('background-color', '#666');
+				})		
+		});
+	
+	</script>
+	
+	</body> 
+</html>

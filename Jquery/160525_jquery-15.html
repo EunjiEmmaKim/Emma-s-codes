@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>
+		<p>Browser Window resized <span>0</span> times. </p>
+
+	<script>	
+		x = 0;
+		$(document).ready(function(){
+			$(window).resize(function(){
+				$("span").text(x += 1);
+			});
+		});
+	</script>
+	
+	</body> 
+</html>

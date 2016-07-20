@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="..css/bootstrap.min.css" />
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 	<div ng-app="">
+ 	<p>Name: <input type="text" ng-model="name"></p>
+ 	<p>My first expression: {{ 5+5 }}</p>
+ 	<p>{{ name }}</p>
+ 	</div>
+
+ 	<div ng-app="myApp" ng-controller="myCtrl">
+	 	First Name: <input type="text" ng-model="firstname"><br>
+	 	Last Name : <input type="text" ng-model="lastname"><br>
+	 	<br>
+	 	Full Name : {{ firstname + " " + lastname }}
+	 </div>
+
+	 <script>
+	 	var app = angular.module('myApp', []);
+	 	app.controller('myCtrl', function($scope){
+	 		$scope.firstname = "John";
+	 		$scope.lastname = "Doe";
+	 	})
+	 </script>
+
+
+ <div ng-app="">
+ 	<p>My First expression: {{ 5 + 5 }}</p>
+ </div> 
+
+ <div ng-app="" ng-init="myCol='lightblue'">
+
+ <input style="background-color: {{myCol}}" ng-model="myCol" value="{{myCol}}">
+ </div> 
+
+ <div ng-app="" ng-init="quantity=1; cost=5">
+ 	<p>Total in dollar: {{ quantity * cost }}</p>
+ 	<p>Total in dollar:<span ng-bind="quantity * cost"></span></p>
+ </div>
+
+ <div ng-app="" ng-init="person={firstname:'john', lastname:'Doe'}">
+ <p>The name is <span ng-bind="person.lastname"></span></p>
+ </div>
+
+ <div ng-app="" ng-init="points=[1,15,19,2,40]">
+ <p>The third result is {{ points[0] }}</p>
+ </div>
+
+ <div ng-app="" ng-init="names=['Jani', 'Hege', 'Kai']">
+ 	<ul>
+ 		<li ng-repeat="x in names">
+ 			{{ x }}
+ 		</li>
+ 	</ul>
+ </div>
+
+ <div ng-app="" ng-init="names=[ {name:'Jani', country:'Norway'},
+ {name:'Hege', country:'Sweden'},
+ {name:'Kai', country:'Denmark'}]">
+
+<ul>
+	<li ng-repeat="x in names">
+		{{ x.name + ', ' + x.country }}
+	</li>
+</ul>
+
+<form ng-app="" name="myForm">
+	Email:
+	<input type="email" name="myAddress" ng-model="text">
+	<span ng-show="myForm.myAddress.$error.email">Not a e-mail address</span>
+</form>--> 
+
+<!-- <style>
+input.ng-pending{
+	background-color:red;
+}
+</style>
+
+<form ng-app="myApp" ng-controller="myCtrl">
+	First name : 
+	<input type="text" ng-model="firstname"><br>
+	Last name :
+	<input type="text" ng-model="lastname"><br>
+	Full name : {{ firstname + " " + lastname }}<br>
+	Full name : {{ fullname() }}
+	<h1> {{ firstname }}</h1>
+	<h2 ng-click="changeName()"> {{ firstname }}</h2>
+</form>
+
+<script>
+	 	var app = angular.module('myApp', []);
+	 	app.controller('myCtrl', function($scope){
+	 		$scope.firstname = "John";
+	 		$scope.lastname = "Doe";
+	 		$scope.changeName = function(){
+	 			$scope.firstname = "Dolly";
+	 		}
+	 		$scope.fullname = function(){
+	 			return $scope.firstname+" "+$scope.lastname;
+	 		}
+	 	})
+</script> -->
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+	<ul>
+		<li ng-repeat="x in names">
+			{{ x.name + ', '+ x.country }}
+		</li>
+	</ul>
+
+</div>
+	<script src="namesController.js"></script>
+</body>
+</html>

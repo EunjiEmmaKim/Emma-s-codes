@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+	button{
+		display : block;
+		margin : 3px;
+		color :blue;
+		width : 200px;
+	}
+	div{
+		color: blue;
+		border: 5px solid red;
+		width : 200px;
+		margin : 3px;
+		text-align : center;
+	}
+		
+	</style>
+	</head>
+	
+	<body>	
+		<button>sample click 1</button>
+		<button>sample click 2</button>
+		<button>sample click 3</button>
+		<h1>When you click on each button it will fisrt remove the old button style and adds a new style in its place</h1>
+
+	
+	<script>	
+		$("button").click(function(){
+			$(this).replaceWith("<div>" + $(this).text("")+ "</div>");
+			//$(this).replaceWith("<div>Click Me</div>");
+			});
+			
+	</script>
+	
+	</body> 
+</html>

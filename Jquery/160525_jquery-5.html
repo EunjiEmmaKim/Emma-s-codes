@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+		div{
+			border: 5px solid hotpink;
+		}
+		p{
+			background: green;
+			margin:10px;
+			color:white;
+			}
+	</style>
+	</head>
+	
+	<body>	
+		<p>Here is the jQuery</p>
+		<p>wrapAll demo</p><br><br>
+		<div id="sample">It is wrapped around all elements</div>
+	
+	<script>				
+		$("p").wrapAll("<div></div>");
+		$("div#sample").wrapInner("<i><strong></strong></i>");
+			
+	</script>
+	
+	</body> 
+</html>

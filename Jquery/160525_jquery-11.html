@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	
+	<style>
+		#drag{
+			margin: 30px 0px 50px 600px;
+		}
+		
+		.drabable{
+			width: 150px;
+			border: 2px solid #F60;
+			border-radius : 5px;
+		}
+		
+		h1{
+			margin-botton : 80px;
+			margin-left: 610px;
+			font-family: Tahoma;
+			color: #039;
+			text-decoration:underline;
+			}
+		
+		#blind{
+			margin-left:50px;
+		}
+	</style>
+	</head>
+	
+	<body>	
+		<h1>Effect's</h1>
+				<div id="drag">	
+			<p class="drabable">
+			This is the dummy text to check the jquery effects click on below buttons to see the effects<br>
+			This is the dummy text to check the jquery effects click on below buttons to see the effects<br>
+			</p>
+		</div>
+		<div id="player">
+			<input type="button" value="Blind" id="blind" />
+			<input type="button" value="Bounce" id="bounce" />
+			<input type="button" value="Clip" id="clip" />
+			<input type="button" value="Drop" id="drop" />
+			<input type="button" value="Explode" id="explode" />
+			<input type="button" value="Fade" id="fade" />
+			<input type="button" value="Fold" id="fold" />
+			<input type="button" value="Highlight" id="hightlight" />
+			<input type="button" value="Pulsate" id="pulsate" />
+			<input type="button" value="Scale" id="scale" />
+			<input type="button" value="Shake" id="shake" />
+			<input type="button" value="Slide" id="slide" />
+			<input type="button" value="Transfer" id="trnasfer" />
+		</div>
+		
+
+			
+	
+	<script>	
+	$(document).ready(function(){
+			$("#blind").click(function(){
+				$(".drabable").effect("blind", 5000);
+				});
+			$("#bounce").click(function(){
+				$(".drabable").effect("bounce", 5000);
+				});
+			$("#clip").click(function(){
+				$(".drabable").effect("clip", 5000);
+				});
+			$("#drop").click(function(){
+				$(".drabable").effect("drop", 5000);
+				});
+			$("#explode").click(function(){
+				$(".drabable").effect("explode", 5000);
+				});
+			$("#fade").click(function(){
+				$(".drabable").effect("fade", 5000);
+				});
+			$("#fold").click(function(){
+				$(".drabable").effect("fold", 5000);
+				});
+			$("#hightlight").click(function(){
+				$(".drabable").effect("highlight", 5000);
+				});
+			$("#pulsate").click(function(){
+				$(".drabable").effect("pulsate", 5000);
+				});
+			$("#scale").click(function(){
+				$(".drabable").effect("scale", 5000);
+				});
+			$("#shake").click(function(){
+				$(".drabable").effect("shake", 5000);
+				});
+			$("#slide").click(function(){
+				$(".drabable").effect("slide", 5000);
+				});
+			$("#transfer").click(function(){
+				$(".drabable").effect("transfer", 5000);
+				});
+			});
+	</script>
+	
+	</body> 
+</html>

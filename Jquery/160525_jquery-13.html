@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+	p{
+		background : cyan;
+		font-weight: bold;
+		cursor : pointer;
+		padding: 5px;
+	}
+	p.over{
+		background: blue;
+	}
+	span{
+		color:black;
+	}
+	</style>
+	</head>
+	
+	<body>	
+		<p>Click me to add elements through delagate</p>
+		<span></span>
+
+	<script>	
+		$("body").delegate("p", "click", function(){
+			$(this).after("<p>Added one element</p>");
+		});
+	</script>
+	
+	</body> 
+</html>

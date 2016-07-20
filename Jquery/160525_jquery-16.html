@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>
+		<fieldset><legend>Music Box</legend>
+		<form name="musicBos" action="#" onSubmit="return false;">
+		<span>My Music Format</span><br>
+		<label>
+			<input type="radio" class="myMusic" name="myMusic" value="mp3" /> 
+			Mp3 Format
+		</label><br>
+		
+		<label>
+			<input type="radio" class="myMusic" name="myMusic" value="midi" />
+			Format
+		</label><br>
+
+		<label>
+			<input type="radio" class="myMusic" name="myMusic" value="wma" />
+			Wma Format
+		</label><br>
+
+		<hr width="100%", style="margin : 2px; padding: 0px; border: 1px solid #C0C0C0;">
+		<br>
+
+		<div id="playlist">
+		<span>My Music Playlist</span><br>
+
+		<section id="mp3" style="display:none">
+			<ol>
+				<li><input type="checkbox" id="mp31" value="1.mp3">1.mp3</li>
+				<li><input type="checkbox" id="mp32" value="2.mp3">2.mp3</li>
+				<li><input type="checkbox" id="mp33" value="3.mp3">3.mp3</li>
+			</ol>
+		</section>
+
+		<section id="midi" style="display:none">
+			<ol>
+				<li><input type="checkbox" id="midi1" value="1.midi">1.midi</li>
+				<li><input type="checkbox" id="midi2" value="2.midi">2.midi</li>
+				<li><input type="checkbox" id="midi3" value="3.midi">3.midi</li>
+			</ol>
+		</section>
+
+		<section id="wma" style="display:none">
+			<ol>
+				<li><input type="checkbox" id="wma1" value="1.wma">1.wma</li>
+				<li><input type="checkbox" id="wma2" value="2.wma">2.wma</li>
+				<li><input type="checkbox" id="wma3" value="3.wma">3.wma</li>
+			</ol>
+		</section>
+		</div>
+			<input type="button" value="Add to Playlist" id="addButton" style="display:none">
+			<br><br>
+
+			<div id="player"></div>
+			<br>
+			<input type="button" value="PlaySound" id="playbutton" style="display:none">
+			<input type="button" value="PauseSound" id="pausebutton" style="display:none">
+		</form>
+		</fieldset>
+	
+	<script>	
+		$(document).ready(function(){
+			$("input[type=radio][name=myMusic]").change(function(){
+				$("#playlist section").css("display", "none");
+					$("#"+this.value).css("display", "block");
+					$("#addButton").css("display", "block");
+			});
+			$("#addButton").click(function(){
+				numberOfChecked = $('input:checkbox:checked').length;
+				typechecked = $("input[type=radio][name=myMusic]:checked").val();
+
+				for(i = 1; i < numberOfChecked; i++){
+					getid = typechecked+i;
+					tempvalue = $("#"+getid).val();
+					$("#player").append("<audio id='audio"+i+"'src='"+tempvalue+"'controls preload='auto' autobuffer></audio><br>");
+				}
+				$("#playbutton").show();
+				$("#pausebutton").show();
+			});
+
+			$("#playbutton").click(function(){
+				numberOfChecked=$('input:checkbox:checked').length;
+				for(i=1; i<=numberOfChecked; i++){
+					var thissound = document.getElementById("audio"+i);
+					thissound.play();
+				}
+			});
+			
+			$("#pausebutton").click(function(){
+				numberOfChecked=$('input:checkbox:checked').length;
+				for(i=1; i<=numberOfChecked; i++){
+					var thissound = document.getElementById("audio"+i);
+					thissound.pause();
+				}
+			});
+		});
+	
+	</script>
+	
+	</body> 
+</html>

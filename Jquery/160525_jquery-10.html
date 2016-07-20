@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+		
+	</style>
+	</head>
+	
+	<body>	
+		<div class="input_fields_wrap">
+			<button class="add_fields_button">Add More Fields</button>
+			<div><input type="text" name="mytext[]"></div>
+		</div>
+	
+	<script>	
+	$(document).ready(function(){
+		var max_fields = 10;
+		var wrapper = $(".input_fields_wrap");
+		var add_button = $(".add_fields_button");
+		
+		var x= 1;
+		$(add_button).click(function(e){
+			e.preventDefault();
+			if(x < max_fields){
+				x++;
+				$(wrapper).append('<div><input type="text" name="mytext[]" /><a href="#" class="remove_field">Remove</a></div>');
+			} 
+			});
+			$(wrapper).on("click", ".remove_field", function(e){
+				e.preventDefault();
+				$(this).parent('div').remove();
+				x--;
+			})
+			});
+	</script>
+	
+	</body> 
+</html>

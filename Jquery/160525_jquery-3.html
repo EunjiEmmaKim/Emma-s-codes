@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+	</style>
+	</head>
+	
+	<body>	
+		<p>Today is <span class="the-day"></span>.</p>
+	
+	<script>				
+		var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+		
+		//get today's weekday number. Sunday is 0, Monday is 1, and Saturday is 6.
+		var todayIndex = (new Date()).getDay();
+		
+		// get the English name of the day by using the todayIndex and our defined array.
+		var day = days[todayIndex];
+		// var day = days[(new Date()).getDay()]; this is also okay.
+		
+		// finally set the text.
+		$('.the-day').text("your "+ day);
+			
+	</script>
+	
+	</body> 
+</html>

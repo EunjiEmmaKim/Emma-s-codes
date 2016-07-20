@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+
+		
+	</style>
+	</head>
+	
+	<body>	
+		<a href="#">
+			<img id="home-button" src="img1.jpg" height=100 width=100>
+		</a>
+	
+	<script>	
+		$(function(){
+			$("#home-button").on({
+				mouseenter:function(){
+				$(this).attr('src', 'img2.png');
+			},
+				mouseleave: function(){
+				$(this).attr('src', 'img1.jpg');
+			}
+			});
+		});
+			
+	</script>
+	
+	</body> 
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+		div{
+			border: 8px solid black;
+		}
+		p{
+			background: cyan;
+			margin:10px;
+		}
+		
+	</style>
+	</head>
+	
+	<body>	
+		<button>wrap me/unwrap me</button>
+		<p>Hello</p>
+		<p>World</p>
+	
+	<script>	
+		var pTags = $("p");
+		$("button").click(function(){
+			if(pTags.parent().is("div")){
+				pTags.unwrap();
+			} else {
+				pTags.wrap("<div></div>");
+			}
+		});
+			
+	</script>
+	
+	</body> 
+</html>

@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style>
+	p{
+		font-size:40px;
+		width: 60px;
+		color:red;
+		font-weight:900;
+		margin:0 10px;
+	}		
+	.title{
+		background:black;
+	}
+	</style>
+	</head>
+	
+	<body>	
+		<p>Here is the jQuery Demo for find() Method
+		   Learn how to do it
+		   by moving your cursor over the next</p>
+		<h2>Move the cursor it will find each word and highlight that text with some background</h2>		
+	
+	<script>	
+		var newText = $("p").text().split(" ").join("</span><span>");
+		newText = "<span>" + newText + "</span>";
+
+		$("p")
+			.html(newText).find("span")
+			.hover(function(){
+			$(this).addClass("title");
+		}, function(){
+			$(this).removeClass("title");
+		})
+			.end()
+			.find(":contains('t')")
+			.css({
+				"font-style": "italic",
+				"font-weight": "bolder"
+			});
+		
+	
+		</script>
+	
+	</body> 
+</html>
