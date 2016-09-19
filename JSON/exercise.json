@@ -1,0 +1,108 @@
+<html>
+<body>
+
+<div id="id01"></div>
+
+<script>
+var myArray = [
+{
+"display": "JavaScript Tutorial",
+"url": "http://www.w3schools.com/js/default.asp"
+},
+{
+"display": "HTML Tutorial",
+"url": "http://www.w3schools.com/html/default.asp"
+},
+{
+"display": "CSS Tutorial",
+"url": "http://www.w3schools.com/css/default.asp"
+}
+];
+
+myFunction(myArray);
+function myFunction(arr){
+	var out = "";
+	var i;
+	for(i = 0; i < arr.length; i++){
+		out += '<a href="' + arr[i].url + '">' +
+		arr[i].display + '</a><bt>';
+	}
+	document.getElementById("id01").innerHTML = out;
+}
+</script>
+// var xamlhttp = new XMLHttpRequest();
+// var url = "myTutorials.txt";
+
+// xmlhttp.onreadystatechange = function(){
+// 	if(xamlhttp.readyState == 4 && xmlhttp.status == 200){
+// 		var myArr = JSON.parse(xmlhttp.responseText);
+// 		myFunction(myArr);
+// 	}
+// }
+// xmlhttp.open("GET", url, true);
+// xmlhttp.send();
+
+// function myFunction(arr){
+// 	var out = "";
+// 	var i;
+// 	for(i = 0l i < arr.length; i++){
+// 		out += '<a href="' +arr[i].url + '">' +
+// 		arr[i].display + '</a><br>';
+// 	}
+// 	document.getElementById("id01").innerHTML = out;
+// }
+
+// <h2>Create Object from JSON String</h2>
+// <p id="demo"></p>
+
+// <script>
+// var text = '{"employees":[' +
+// 	'{"firstName":"John", "lastName":"Doe"},' +
+// 	'{"firstName":"Anna","lastName":"Smith"},' +
+// 	'{"firstName":"Peter", "lastName":"Jones"}]}';
+
+// obj = JSON.parse(text);
+// document.getElementById("demo").innerHTML =
+// obj.employees[1].firstName + "" + obj.employees[1].lastName;
+// </script>
+
+// <p>How to create a JavaScript object array.</p>
+// <p id="demo"></p>
+
+// <script>
+// var employees = [
+// 	{
+// 		"firstName":"John",
+// 		"lastName":"Doe"
+// 	},
+// 	{
+// 		"firstName":"Anna",
+// 		"lastName":"Smith"
+// 	},
+// 	{
+// 		"firstName":"Peter",
+// 		"lastName":"Jones"
+// 	}
+// ];
+
+
+// document.getElementById("demo").innerHTML =
+// employees[1]["firstName"] + "" + employees[1]["lastName"]
+
+// </script>
+// <h2>JSON Object Creation in Javascript</h2>
+// <p id="demo"></p>
+
+// <script>
+// var text = '{"name":"John Johnson", "street":"Oslo West 16", "phone":"55512345"}';
+
+// var obj = JSON.parse(text);
+
+// document.getElementById("demo").innerHTML = 
+// obj.name + "<br>" +
+// obj.street + "<br>" +
+// obj.phone;
+// </script>
+
+</body>
+</html>
