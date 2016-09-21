@@ -2,20 +2,25 @@
 <html>
 <head>
 	<title>ReactJS - Pic Zoom Out/In</title>
+
 </head>
 <body>
-	<div id="app"></div>
-		<script src="../build/react.js"></script>
-	    <script src="../build/react-dom.js"></script>
-		<script>
+	<div id="app"></div>	
+	<script src="../build/react.js"></script>
+	<script src="../build/react-dom.js"></script>
+	<script>
+		var React = require('react');
+		var ReactDOM = require('react-dom');
 
-			class Profile extends React.Component {
-				render(){
-					return <h2>Hello world!</h2>;
+		var Profile = React.createClass({
+			render: function(){
+				return (<h2>hello world!</h2>);
 				}
-			}
-			React.render(<Profile />, document.getElementById('app'));
-		
-		</script>
+			});
+		ReactDOM.render(
+			<Profile name="Emma Kim" age={17} bio="I like cats."/>, 
+			document.getElementById('app')
+			);
+</script>
 </body>
 </html>
